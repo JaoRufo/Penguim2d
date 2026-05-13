@@ -119,6 +119,7 @@ visible = false
 shape = SubResource("CapsuleShape2D_u3f3p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=619367664]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_i623q")
 animation = &"idle"
 autoplay = "idle"
@@ -127,6 +128,5 @@ frame_progress = 0.18929814
 [node name="Camera2D" type="Camera2D" parent="." unique_id=526970702]
 limit_left = 0
 limit_top = 0
-limit_right = 447
 limit_bottom = 200
 limit_smoothed = true

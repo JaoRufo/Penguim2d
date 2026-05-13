@@ -1,0 +1,60 @@
+[gd_scene format=4 uid="uid://ccmqashagbgs1"]
+
+[ext_resource type="PackedScene" uid="uid://doc61wlw1ucb7" path="res://entities/player.tscn" id="1_2xpkg"]
+[ext_resource type="TileSet" uid="uid://dhw5qvoo4tv31" path="res://tiles/terrain.tres" id="2_gbfvw"]
+[ext_resource type="Texture2D" uid="uid://gc0dh8nkm861" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="3_gbfvw"]
+[ext_resource type="Texture2D" uid="uid://quywo7y8iclr" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/5 - Tree_row_BG_2.png" id="4_wqnte"]
+[ext_resource type="Texture2D" uid="uid://cutvymj6r8y0x" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="5_v5bin"]
+[ext_resource type="Texture2D" uid="uid://b7o6wc108uufl" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="6_e3l50"]
+
+[node name="Forest" type="Node2D" unique_id=983377487]
+
+[node name="Player" parent="." unique_id=583631557 instance=ExtResource("1_2xpkg")]
+position = Vector2(144, 108)
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=1177773670]
+tile_map_data = PackedByteArray("AAAAAAwAAQACAAMAAAABAAwAAQACAAMAAAACAAwAAQACAAMAAAADAAwAAQACAAMAAAAEAAwAAQACAAMAAAAFAAwAAQACAAMAAAAGAAwAAQACAAMAAAAHAAwAAQACAAMAAAAIAAwAAQACAAMAAAAJAAwAAQACAAMAAAAKAAwAAQACAAMAAAALAAwAAQACAAMAAAAMAAwAAQACAAMAAAANAAwAAQACAAMAAAAOAAwAAQACAAMAAAAPAAwAAQACAAMAAAAQAAwAAQACAAMAAAARAAwAAQACAAMAAAASAAwAAQACAAMAAAATAAwAAQACAAMAAAAUAAwAAQACAAMAAAAVAAwAAQACAAMAAAAWAAwAAQACAAMAAAAXAAwAAQACAAMAAAAhAAwAAQACAAMAAAAYAAwAAQACAAMAAAAZAAwAAQACAAMAAAAaAAwAAQACAAMAAAAbAAwAAQACAAMAAAAcAAwAAQACAAMAAAAdAAwAAQACAAMAAAAeAAwAAQACAAMAAAAfAAwAAQACAAMAAAAgAAwAAQACAAMAAAAiAAwAAQACAAMAAAAjAAwAAQACAAMAAAAkAAwAAQACAAMAAAAlAAwAAQACAAMAAAAmAAwAAQACAAMAAAAnAAwAAQACAAMAAAAoAAwAAQACAAMAAAApAAwAAQACAAMAAAAqAAwAAQACAAMAAAArAAwAAQACAAMAAAAsAAwAAQACAAMAAAA=")
+tile_set = ExtResource("2_gbfvw")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=771279395]
+repeat_size = Vector2(288, 0)
+
+[node name="6" type="Parallax2D" parent="Parallax2D" unique_id=898098446]
+scroll_scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/6" unique_id=532147849]
+z_index = -1
+position = Vector2(2.3841858e-07, -3.000001)
+scale = Vector2(0.99305546, 1)
+texture = ExtResource("3_gbfvw")
+centered = false
+
+[node name="5" type="Parallax2D" parent="Parallax2D" unique_id=863660086]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/5" unique_id=1037721556]
+z_index = -1
+position = Vector2(2.3841858e-07, -3.000001)
+scale = Vector2(0.99305546, 1)
+texture = ExtResource("4_wqnte")
+centered = false
+
+[node name="4" type="Parallax2D" parent="Parallax2D" unique_id=1415097274]
+scroll_scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/4" unique_id=1078172245]
+z_index = -1
+position = Vector2(2.3841858e-07, -3.000001)
+scale = Vector2(0.99305546, 1)
+texture = ExtResource("5_v5bin")
+centered = false
+
+[node name="3" type="Parallax2D" parent="Parallax2D" unique_id=1118124477]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/3" unique_id=752693676]
+z_index = -1
+position = Vector2(2.3841858e-07, -3.000001)
+scale = Vector2(0.99305546, 1)
+texture = ExtResource("6_e3l50")
+centered = false
