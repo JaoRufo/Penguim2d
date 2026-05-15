@@ -111,7 +111,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=583631557]
+[node name="Player" type="CharacterBody2D" unique_id=583631557 groups=["Player"]]
+collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_merdl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1439265513]
@@ -124,9 +126,3 @@ sprite_frames = SubResource("SpriteFrames_i623q")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.18929814
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=526970702]
-limit_left = 0
-limit_top = 0
-limit_bottom = 200
-limit_smoothed = true
