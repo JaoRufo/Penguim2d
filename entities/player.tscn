@@ -184,13 +184,22 @@ shape = SubResource("CapsuleShape2D_u3f3p")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=619367664]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_i623q")
-animation = &"hurt"
+animation = &"duck"
 autoplay = "idle"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=314465928]
+collision_layer = 2
+collision_mask = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=788614233]
+z_index = 2
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_6nm46")
-debug_color = Color(0.9411765, 0.20392157, 0.043137256, 0.41960785)
+debug_color = Color(0.90612817, 1.92523e-07, 0.516372, 0.41960785)
+
+[node name="ReloadTimer" type="Timer" parent="." unique_id=2116999159]
+one_shot = true
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]
