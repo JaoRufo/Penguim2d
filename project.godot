@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pinguim2D"
-run/main_scene="uid://ccmqashagbgs1"
+run/main_scene="uid://djwbflnxokdoy"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
@@ -27,6 +27,7 @@ window/stretch/mode="canvas_items"
 Player=""
 Enemies=""
 LethalArea=""
+Water=""
 
 [input]
 
@@ -63,6 +64,7 @@ duck={
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="level_end"
 2d_physics/layer_5="lethal_area"
+2d_physics/layer_6="water"
 
 [physics]
 
